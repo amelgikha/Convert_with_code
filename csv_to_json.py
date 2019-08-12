@@ -2,6 +2,7 @@ import json
 import csv
 
 # read csv
+# gunakan file csv yang kalian miliki
 list1=[]
 with open('doraemon.csv','r') as x:
     reader = csv.DictReader(x)
