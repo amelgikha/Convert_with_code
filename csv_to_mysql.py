@@ -1,6 +1,7 @@
 import csv
 import mysql.connector
 
+#read csv
 list1=[]
 with open('doraemon.csv','r') as x:
     reader = csv.DictReader(x)
