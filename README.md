@@ -1,9 +1,9 @@
-kode ini berguna untuk convert berbagai data \n
-csv to json X json to csv
-csv to mysql X mysql to csv
-csv to mongo X mongo to mysql
-json to mysql X mysql to json
-json to mongo X mongo to json
-mongo to mysql X mysql to mongo
+kode ini berguna untuk convert berbagai data :
+1. csv to json X json to csv
+2. csv to mysql X mysql to csv
+3. csv to mongo X mongo to mysql
+4. json to mysql X mysql to json
+5. json to mongo X mongo to json
+6. mongo to mysql X mysql to mongo
 
 #### Jangan lupa masukkan username dan password masing-masing #####
