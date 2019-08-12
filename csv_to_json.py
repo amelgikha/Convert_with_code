@@ -11,6 +11,7 @@ with open('doraemon.csv','r') as x:
 print(list1)
 
 # write json
+# tidak perlu membuat file json karena akan otomatis terbuat jika menggunakan kode di bawah ini
 with open ('temandoraemon.json', 'w') as x:
     x.write (str(list1).replace("'",'"'))
 print(x)
