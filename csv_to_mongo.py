@@ -2,6 +2,7 @@ import csv
 import pymongo
 
 # read csv
+# gunakan file csv yang kalian punya
 list1=[]
 with open('doraemon.csv','r') as x:
     reader = csv.DictReader(x)
@@ -10,6 +11,8 @@ with open('doraemon.csv','r') as x:
 print(list1)
 
 # write mongo
+# db = database
+# col = collection
 x = pymongo.MongoClient('mongodb://localhost:27017')
 db = x['doraemon']
 col = db['teman']
