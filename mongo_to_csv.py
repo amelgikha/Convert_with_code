@@ -1,24 +1,16 @@
-import mysql.connector
+import pymongo
 import csv
 
-dbku = mysql.connector.connect(
-    host =  '<host>',
-    port = 3306,
-    user = '<user>',
-    passwd = '<password>',
-    database = 'doraemon'
-)
-kursor = dbku.cursor()
-querydb = '''select * from karakter'''
-kursor.execute(querydb)
-# print(kursor.fetchall())
+# read mongo
+x = pymongo.MongoClient('mongodb://localhost:27017')
+db = x['doraemon']
+col = db['karakter']
+data = list(col.find())
+# print(data)
 
-b = kursor.fetchall()
-d = [{'id': item [0],'nama':item[1],'usia':item[2]}for item in b]
-# print (d)
-
+# write csv
 with open('doraemon.csv','w', newline='')as x:
     kolom = list(['id','nama','usia'])
     writer = csv.DictWriter(x, fieldnames = kolom)
     writer.writeheader()
-    writer.writerows(d)
+    writer.writerows(data)
